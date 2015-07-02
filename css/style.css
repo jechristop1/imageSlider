@@ -1,0 +1,58 @@
+img {
+  width: 100%;
+}
+
+figure {
+  position: absolute;
+  opacity: 0;
+  transition: 2s;
+}
+
+.slideshow {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+figure.show {
+  opacity: 1;
+  position: static;
+  transition: 2s;
+}
+
+.next, .prev {
+  position: absolute;
+  top: calc(50% - 25px);
+  z-index: 1;
+  font-size: 2em;
+  background-color: #434343;
+  border: 1px solid arken(darkgrey, 45%);
+  color: #cccccc;
+  width: 75px;
+  height: 75px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  opacity: .9;
+}
+.next:hover, .prev:hover {
+  background-color: #292929;
+  border: 1px solid arken(darkgrey, 55%);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.next {
+  right: 0;
+}
+
+.prev {
+  left: 0;
+}
